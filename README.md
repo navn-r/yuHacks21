@@ -1,3 +1,6 @@
+# FæktChɛk (Fact Check)  
+> Verifying the truth has never been easier!
+
 ## Inspiration
 Upon hearing of the challenge regarding media and misinformation, the vast amount of email forwards and Facebook shares from my relatives with completely made up stories instantly came to mind. Thus the idea of a browser extension that checks headlines to verify weather or not its article is infact a real article or not.
 
