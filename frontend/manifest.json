@@ -1,0 +1,18 @@
+{
+  "name": "FæktChɛk",
+  "description": "PASTE ELEVATOR PITCH HERE",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["activeTab", "contextMenus", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

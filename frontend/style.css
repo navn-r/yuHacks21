@@ -1,0 +1,77 @@
+#fact-check-extension-overlay {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.fact-check-extension-exit-button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.25rem;
+  width: 3.25rem;
+  color: #2f2f2f;
+  font-size: 2rem;
+  border: 0;
+  outline: none;
+  transform: translate(-50px, -175px);
+  border-radius: 50%;
+  background-color: #b2beb5;
+  user-select: none;
+  -webkit-user-select: none;
+  animation: appear-button 350ms ease-in 1;
+}
+.fact-check-extension-exit-button:hover {
+  filter: brightness(0.75);
+  cursor: pointer;
+}
+
+.fact-check-extension-container {
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template-rows: 4rem auto;
+  border-radius: 15px;
+  transform: translateX(-25px);
+  animation: appear-container 350ms ease-in 1;
+}
+
+.fact-check-extension-container>* {
+  padding: 1rem;
+}
+
+@keyframes appear-container {
+  0%{
+    opacity: 0;
+    transform: translate(-25px, -10px);
+  }
+}
+
+@keyframes appear-button {
+  0%{
+    opacity: 0;
+    transform: translate(-50px, -165px);
+  }
+}
+
+
+.fact-check-extension-header {
+  background-color: #2f2f2f;
+  color: white;
+  padding-bottom: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}

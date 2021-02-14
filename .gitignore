@@ -1,0 +1,4 @@
+backend/__pycache__
+backend/env
+**/*.run*
+backend/fake_news_model*/**
