@@ -1,6 +1,7 @@
 "use strict";
 
 const MIN_WORDS = 5;
+const BASE_HREF = "http://127.0.0.1:5000";
 
 const item = {
   id: "factCheckContextMenu",
@@ -18,15 +19,19 @@ const onClickedSelection = (
     return;
   }
 
-  // TODO: fetch call here
-  const checkFact = Promise.resolve({
-    text, isFact: Math.round(Math.random())
-  });
+  const checkFact = fetch(BASE_HREF + '/check', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: "{\"text\": \""+ text + "\"}"
+  }).then(res => res.json());
 
-  checkFact.then((data) => {
+  checkFact.then((result) => {
     chrome.tabs.sendMessage(tabId, {
       requested: "createPopup",
-      body: { data, info: { url, height, width } },
+      body: { data: { text, isFact: result.score }, info: { url, height, width } },
     });
   })
 };

@@ -29,12 +29,7 @@ RequestBody:
 def index():
   if request.method == 'POST':
     text = request.get_json()['text']
-    return jsonify({'score': verify([text])})
-
-
-@app.route('/')
-def index():
-    return "<div><h1>FæktChɛk Backend Server<h1>Uh Oh! There's nothing here!</div>"
+    return jsonify({'score': str(verify([text]))})
 
 if __name__ == '__main__':
   app.run(threaded=True, port=5000)

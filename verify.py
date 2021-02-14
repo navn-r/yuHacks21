@@ -7,7 +7,7 @@ from nltk.tokenize import word_tokenize
 from keras.preprocessing.text import Tokenizer
 # from sklearn.feature_extraction.text import TfidfVectorizer
 
-interpreter = tf.lite.Interpreter(model_path="./models/model.tflite")
+interpreter = tf.lite.Interpreter(model_path="./models/model.tflite") 
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -23,4 +23,3 @@ def verify(data):
     output_data = interpreter.get_tensor(output_details[0]['index'])
     
     return output_data[0][0]
-

@@ -1,6 +1,6 @@
 {
   "name": "FæktChɛk",
-  "description": "PASTE ELEVATOR PITCH HERE",
+  "description": "Verifying the truth has never been easier! ",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": ["activeTab", "contextMenus", "storage"],

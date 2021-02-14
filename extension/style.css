@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 #fact-check-extension-overlay {
   margin: 0;
   padding: 0;
@@ -11,6 +13,7 @@
   height: 100%;
   z-index: 9999999999;
   background-color: rgba(0,0,0,0.5);
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .fact-check-extension-exit-button {
@@ -74,4 +77,61 @@
   padding-bottom: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.fact-check-extension-header h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: normal;
+  color: white !important;
+}
+
+.fact-check-extension-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+.fact-check-extension-content h4 {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.fact-check-extension-content h4:nth-child(3) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+
+.fact-check-extension-content p {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+}
+
+.fact-check-extension-fake {
+  color: white;
+  background-color: red;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+}
+.fact-check-extension-real {
+  color: white;
+  background-color: green;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+}
+.fact-check-extension-maybe-fake {
+  color: black;
+  background-color: yellow;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.fact-check-extension-content h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
